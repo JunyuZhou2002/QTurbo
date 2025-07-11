@@ -1,7 +1,7 @@
 import subprocess
 
 # Timeout settings (in seconds)
-EXP_TIMEOUT = 300
+EXP_TIMEOUT = 10000000
 SORT_TIMEOUT = 10  
 RESULT_TIMEOUT = 10 
 

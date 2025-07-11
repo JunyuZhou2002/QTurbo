@@ -1,7 +1,7 @@
 import subprocess
 
 # Timeout settings (in seconds)
-EXP_TIMEOUT = 300
+EXP_TIMEOUT = 10000000
 SORT_TIMEOUT = 10  
 RESULT_TIMEOUT = 10 
 
@@ -20,10 +20,10 @@ def run_with_timeout(cmd, cwd, timeout, description):
         print(f"✗ ERROR: {description} - {e}")
 
 # Run mapping experiment
-# run_with_timeout(["python3", "exp.py"], "Mapping&TimeDep/Mapping/Rydberg/Ising_chain/base", EXP_TIMEOUT, "mapping base exp.py")
-# run_with_timeout(["python3", "exp.py"], "Mapping&TimeDep/Mapping/Rydberg/Ising_chain/opt", EXP_TIMEOUT, "mapping opt exp.py")
-# run_with_timeout(["python3", "sort.py"], "Mapping&TimeDep/Mapping/Rydberg/Ising_chain/result", SORT_TIMEOUT, "mapping sort.py")
-# run_with_timeout(["python3", "result.py"], "Mapping&TimeDep/Mapping/Rydberg/Ising_chain/result", RESULT_TIMEOUT, "mapping result.py")
+run_with_timeout(["python3", "exp.py"], "Mapping&TimeDep/Mapping/Rydberg/Ising_chain/base", EXP_TIMEOUT, "mapping base exp.py")
+run_with_timeout(["python3", "exp.py"], "Mapping&TimeDep/Mapping/Rydberg/Ising_chain/opt", EXP_TIMEOUT, "mapping opt exp.py")
+run_with_timeout(["python3", "sort.py"], "Mapping&TimeDep/Mapping/Rydberg/Ising_chain/result", SORT_TIMEOUT, "mapping sort.py")
+run_with_timeout(["python3", "result.py"], "Mapping&TimeDep/Mapping/Rydberg/Ising_chain/result", RESULT_TIMEOUT, "mapping result.py")
 
 # Run time dependent simulation experiment
 run_with_timeout(["python3", "exp.py"], "Mapping&TimeDep/TimeDep/Rydberg/mis_chain/base", EXP_TIMEOUT, "time dependent experiment base exp.py")
