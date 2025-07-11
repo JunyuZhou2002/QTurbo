@@ -11,7 +11,8 @@ parser = argparse.ArgumentParser(description="Parse system size and evolution ti
 parser.add_argument('--N', type=int, default=12, help='Specify the system size N')
 parser.add_argument('--J', type=float, default=0.025, help='Specify the interaction strength J')
 parser.add_argument('--h', type=float, default=0.125, help='Specify the interaction strength h')
-parser.add_argument('--T', type=int, default=3.4, help='Specify the evolution time T')
+# our actual T is 1, but we use 3.4 since the atom position solution from T=1 cannot be mapped to real device. Then we use Execution time/3.4 as the real execution time.
+parser.add_argument('--T', type=float, default=3.4, help='Specify the evolution time T')
 parser.add_argument('--F', type=str, default="base.csv", help='Specify the file name to put result')
 
 # Parse the arguments

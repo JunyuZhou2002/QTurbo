@@ -40,6 +40,7 @@ def generate_qmachine(n=3, inits=None):
 
     L = rydberg.add_signal_line()
     ins = L.add_instruction("native")
+    # The actual upper bound is 2.5, we use 0.4 here since the atom position solution from upper_bound=2.5 cannot be mapped to real device, and even in this case, the solution for o is less then 0.4.
     o = ins.add_local_variable(init_value=0.0, lower_bound=0, upper_bound=0.4)
     p = ins.add_local_variable(init_value=0.0, lower_bound=-np.inf, upper_bound=np.inf)
     ham_rabi = 0
