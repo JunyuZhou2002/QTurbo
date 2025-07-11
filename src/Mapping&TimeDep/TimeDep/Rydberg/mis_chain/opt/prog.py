@@ -1,5 +1,5 @@
 from AQS.compiler import *
-from system.mis_chain import *
+from AQS.system.mis_chain import *
 from AQS.simulator.rydberg1D import *
 
 ##############################################################################################################

@@ -70,7 +70,7 @@ for i in range(len(array_base)):
 array_base = np.delete(array_base, del_ls)
 array_opt = np.delete(array_opt, del_ls)
 
-result_value_2 = (sum(array_base)-sum(array_opt))/sum(array_base)
+result_value_2 = (sum(array_base)-sum(array_opt))/sum(array_base)*100
 
 
 # Error analysis
@@ -104,7 +104,7 @@ for i in range(len(array_base)):
 array_base = np.delete(array_base, del_ls)
 array_opt = np.delete(array_opt, del_ls)
 
-result_value_3 = (sum(array_base)-sum(array_opt))/sum(array_base)
+result_value_3 = (sum(array_base)-sum(array_opt))/sum(array_base)*100
 
 with open('result.txt', 'w') as f:
     f.write("Compilation Time Reduction:\n")
