@@ -9,7 +9,7 @@ def run_with_timeout(cmd, cwd, timeout, description):
     """Run command with timeout and error handling"""
     try:
         print(f"Running: {description}")
-        result = subprocess.run(cmd, cwd=cwd, timeout=timeout, capture_output=True, text=True)
+        result = subprocess.run(cmd, cwd=cwd, text=True)
         if result.returncode == 0:
             print(f"✓ SUCCESS: {description}")
         else:
